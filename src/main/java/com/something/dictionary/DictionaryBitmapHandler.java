@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class DictionaryBitmapHandler {
 
     private int loadingCount;
-    private final Boolean[] bitmap;
+    private final boolean[] bitmap;
     private IntHashGeneratorsPool intHashFunctionsPool;
 
     public DictionaryBitmapHandler(Integer bitmapSize, Dictionary dictionary, IntHashGeneratorsPool hashPool) throws IOException {
@@ -22,7 +22,7 @@ public class DictionaryBitmapHandler {
         bitmap = buildBitMap(bitmapSize, dictionary);
     }
 
-    public Boolean[] getBitmap() {
+    public boolean[] getBitmap() {
         return bitmap;
     }
 
@@ -37,10 +37,9 @@ public class DictionaryBitmapHandler {
         return true;
     }
 
-    private Boolean[] buildBitMap(Integer bitmapSize, Dictionary dictionary) throws IOException {
+    private boolean[] buildBitMap(Integer bitmapSize, Dictionary dictionary) throws IOException {
         Scanner dictionaryScanner = dictionary.getScanner();
-        Boolean[] bitmap = new Boolean[bitmapSize];
-        Arrays.fill(bitmap, Boolean.FALSE);
+        boolean[] bitmap = new boolean[bitmapSize];
         loadingCount = 0;
         String word;
         System.out.printf("Scanning online dictionary");

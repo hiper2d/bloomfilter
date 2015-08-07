@@ -26,8 +26,12 @@ public class BuildBitMapState extends State {
                 commandLineHandler.getIntHashGeneratorsPool()
         );
         if(logger.isDebugEnabled()) {
-            Boolean[] bitmap = dictionaryBitmapBuider.getBitmap();
-            logger.debug(new StringBuilder("Bitmap contains ").append(Arrays.asList(bitmap).stream().filter(v -> v == true).count()).append(" positive elements."));
+            boolean[] bitmap = dictionaryBitmapBuider.getBitmap();
+            int counter = 0;
+            for(int i=0; i<bitmap.length; i++) {
+                counter += (bitmap[i]) ? 1: 0;
+            }
+            logger.debug(new StringBuilder("Bitmap contains ").append(counter).append(" positive elements."));
         }
         commandLineHandler.setBitmapHandler(dictionaryBitmapBuider);
         commandLineHandler.setState(commandLineHandler.getCheckWordState());

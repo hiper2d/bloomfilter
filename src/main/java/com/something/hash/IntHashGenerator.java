@@ -27,7 +27,7 @@ public class IntHashGenerator {
         try {
             digest = MessageDigest.getInstance(DEFAULT_HASH_ALGORITHM);
         } catch (NoSuchAlgorithmException e) {
-            // This catch will never be caller as we use the MD5 algorithm which is a part of any JVM.
+            // This catch will never be called as we use the MD5 algorithm which is a part of any JVM.
             logger.error("The MD5 algorithm can not be found in the current JVM with is impossible.");
             e.printStackTrace();
         }
