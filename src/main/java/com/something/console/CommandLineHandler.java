@@ -16,9 +16,9 @@ public class CommandLineHandler {
     private State welcomeState;
     private State readBitmapSizeState;
     private State readHashFunctionsAmountState;
-    private BuildHashFunctionsState buildHashFunctionsState;
-    private BuildBitMapState buildBitMapState;
-    private CheckWordState checkWordState;
+    private State buildHashFunctionsState;
+    private State buildBitMapState;
+    private State checkWordState;
     private State endState;
 
     private Integer bitmapSize;
@@ -86,27 +86,27 @@ public class CommandLineHandler {
         this.readHashFunctionsAmountState = readHashFunctionsAmountState;
     }
 
-    public BuildHashFunctionsState getBuildHashFunctionsState() {
+    public State getBuildHashFunctionsState() {
         return buildHashFunctionsState;
     }
 
-    public void setBuildHashFunctionsState(BuildHashFunctionsState buildHashFunctionsState) {
+    public void setBuildHashFunctionsState(State buildHashFunctionsState) {
         this.buildHashFunctionsState = buildHashFunctionsState;
     }
 
-    public BuildBitMapState getBuildBitMapState() {
+    public State getBuildBitMapState() {
         return buildBitMapState;
     }
 
-    public void setBuildBitMapState(BuildBitMapState buildBitMapState) {
+    public void setBuildBitMapState(State buildBitMapState) {
         this.buildBitMapState = buildBitMapState;
     }
 
-    public CheckWordState getCheckWordState() {
+    public State getCheckWordState() {
         return checkWordState;
     }
 
-    public void setCheckWordState(CheckWordState checkWordState) {
+    public void setCheckWordState(State checkWordState) {
         this.checkWordState = checkWordState;
     }
 

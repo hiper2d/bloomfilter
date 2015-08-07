@@ -30,16 +30,4 @@ public class Main {
             logger.error(e);
         }
     }
-
-    @Deprecated
-    private void printHello() {
-        IntHashGenerator generator = new IntHashGenerator(100, SaltGenerator.generate());
-        System.out.println(generator.generateIntHash("asdasdsadad"));
-        System.out.println(generator.generateIntHash("asdasdsadad123"));
-        System.out.println(generator.generateIntHash("asdasdsadad2"));
-        System.out.println(generator.generateIntHash("asdasdsadadd2"));
-        System.out.println(generator.generateIntHash("asdasdsa123dad2"));
-        System.out.println(generator.generateIntHash("asdasqewqdsadad26"));
-        System.out.println(generator.generateIntHash("asdasqewqdsadad26"));
-    }
 }
